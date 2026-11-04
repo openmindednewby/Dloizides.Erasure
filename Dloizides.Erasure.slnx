@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Dloizides.Erasure/Dloizides.Erasure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Dloizides.Erasure.Tests/Dloizides.Erasure.Tests.csproj" />
+  </Folder>
+</Solution>
