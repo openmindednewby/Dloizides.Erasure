@@ -4,6 +4,11 @@ namespace Dloizides.Erasure.Testing;
 public static class ErasureConformance
 {
     /// <summary>Runs the whole contract against the scenario; throws ErasureConformanceException on any break.</summary>
-    public static Task AssertConformsAsync(ErasureConformanceScenario scenario, CancellationToken cancellationToken = default) =>
-        throw new NotImplementedException();
+    public static async Task AssertConformsAsync(ErasureConformanceScenario scenario, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(scenario);
+        var run = new ErasureConformanceRun(scenario, cancellationToken);
+        await run.ExecuteAsync().ConfigureAwait(false);
+        if (run.Failures.Count > 0) throw new ErasureConformanceException(run.Failures);
+    }
 }

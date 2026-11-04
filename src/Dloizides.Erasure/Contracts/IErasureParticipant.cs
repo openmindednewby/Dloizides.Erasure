@@ -1,6 +1,6 @@
 namespace Dloizides.Erasure.Contracts;
 
-/// <summary>What a service implements to take part in account erasure. Never catch a failure here: it must surface as a 500.</summary>
+/// <summary>What a service implements to join account erasure. Let every failure throw: it must surface as a 500.</summary>
 public interface IErasureParticipant
 {
     /// <summary>Erases the subject and reports every dataset; a repeat call erases 0 and reports again.</summary>

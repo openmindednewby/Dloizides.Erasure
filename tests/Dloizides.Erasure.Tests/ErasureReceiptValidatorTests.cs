@@ -91,7 +91,7 @@ public sealed class ErasureReceiptValidatorTests
     public void FindProblems_WithUndefinedOutcome_ReportsIt()
     {
         var request = new ErasureRequest(Guid.NewGuid(), Guid.NewGuid(), null, RequestedAt);
-        var receipt = ReceiptFor(request, 0, new ErasureDatasetResult("patterns", 0, 0));
+        var receipt = ReceiptFor(request, 0, new ErasureDatasetResult("patterns", (ErasureOutcome)99, 0));
 
         var problems = ErasureReceiptValidator.FindProblems(request, receipt);
 

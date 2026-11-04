@@ -4,6 +4,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);MA0001;MA0003;MA0040</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
